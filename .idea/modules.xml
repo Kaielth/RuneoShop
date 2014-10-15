@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RRopa.iml" filepath="$PROJECT_DIR$/RRopa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuneoShop.iml" filepath="$PROJECT_DIR$/RuneoShop.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
