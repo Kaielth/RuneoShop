@@ -10,11 +10,9 @@
     <string name="tshirt_a_name">Easy Rib T-Shirt</string>
     <string name="tshirt_a_price">£8.00</string>
     <string name="tshirt_a_description">Comfortable ribbed t-shirt in black featuring stitch detailing and pocket detailing.</string>
-
     <string name="tshirt_b_name">LONG SLEEVE CREW NECK</string>
     <string name="tshirt_b_price">£12.00</string>
     <string name="tshirt_b_description">100% Cotton. Centre Back to Hem: 69cm/27.25", Chest: 49cm/19.25", Sleeve Length: 68cm/26.75", Bicep: 18cm/7". (Measured from UK Size M).</string>
-
     <string name="tshirt_c_name">CREW NECK T SHIRT</string>
     <string name="tshirt_c_price">£6.00</string>
     <string name="tshirt_c_description">100% Cotton. Centre Back to Hem 71cm/28", Chest 51cm/20", Bicep 16cm/6.25", Sleeve Length 19.5cm/7.5". (Measured from UK Size M).</string>
@@ -26,5 +24,6 @@
     <!-- Descripciones -->
     <string name="menu_vision_description">Ofrecer al mundo una cartera de marcas de ropa que se anticipan y satisfacen los deseos y las necesidades de las personas.</string>
     <string name="menu_mision_description">Refrescar al mundo en cuerpo, mente y alma. Inspirar momentos de optimismo a través de nuestras marcas y acciones, para crear valor y dejar nuestra huella en cada uno de los lugares en los que operamos.</string>
+    <string name="title_activity_splash">Splash</string>
 
 </resources>
