@@ -26,5 +26,6 @@
     <string name="menu_mision_description">Refrescar al mundo en cuerpo, mente y alma. Inspirar momentos de optimismo a través de nuestras marcas y acciones, para crear valor y dejar nuestra huella en cada uno de los lugares en los que operamos.</string>
     <string name="title_activity_splash">Splash</string>
     <string name="title_activity_log_in">LogIn</string>
+    <string name="title_activity_sing_in">SingIn</string>
 
 </resources>

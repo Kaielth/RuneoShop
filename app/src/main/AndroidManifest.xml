@@ -29,6 +29,10 @@
             android:name=".Splash"
             android:label="@string/title_activity_splash" >
         </activity>
+        <activity
+            android:name=".SignIn"
+            android:label="@string/title_activity_sing_in" >
+        </activity>
     </application>
 
 </manifest>

@@ -7,41 +7,35 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
 
 
-public class LogIn extends ActionBarActivity {
+public class SignIn extends ActionBarActivity {
 
-    Button btnLogIn, btnRegister;
+    Button btnSignUp;
+    EditText txtName,txtAddress;
+    DatePicker dpiBirthDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_log_in);
-        btnLogIn = (Button)findViewById(R.id.btnLogIn);
-        btnRegister = (Button)findViewById(R.id.btnRegister);
+        setContentView(R.layout.activity_sign_in);
 
-        btnLogIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(LogIn.this,Splash.class);
-                startActivity(i);
-            }
-        });
-
-        btnRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(LogIn.this,SignIn.class);
-                startActivity(i);
-            }
-        });
+        btnSignUp = (Button)findViewById(R.id.btnSignUp);
+        txtName = (EditText)findViewById(R.id.txtName);
+        txtAddress = (EditText)findViewById(R.id.txtAddress);
     }
 
+    public void singUp (View v){
+        Intent i = new Intent(this,Splash.class);
+        startActivity(i);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.log_in, menu);
+        getMenuInflater().inflate(R.menu.sing_in, menu);
         return true;
     }
 
