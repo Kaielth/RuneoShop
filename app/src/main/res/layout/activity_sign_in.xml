@@ -61,6 +61,7 @@
             android:layout_height="wrap_content"
             android:text="Sign up"
             android:id="@+id/btnSignUp"
+            android:onClick="singUp"
             android:layout_gravity="right|bottom" />
     </LinearLayout>
 </ScrollView>
