@@ -330,6 +330,8 @@
         android:layout_alignBottom="@+id/linearLayout"
         android:layout_alignLeft="@+id/mainContainer"
         android:layout_alignStart="@+id/mainContainer"
-        android:layout_marginLeft="71dp" />
+        android:layout_marginLeft="71dp"
+        android:textStyle="bold"
+        android:textSize="24dp"/>
 
 </RelativeLayout>

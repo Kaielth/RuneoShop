@@ -96,10 +96,10 @@ public class MainShop extends ActionBarActivity {
         category.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final CharSequence[] items = {"All", "Tshirts", "Pants"};
+                final CharSequence[] items = {"Todos", "Camisetas", "Pantalones"};
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setTitle("Select your category:");
+                builder.setTitle("Elige tu categoría:");
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
                         if(item == 0){
