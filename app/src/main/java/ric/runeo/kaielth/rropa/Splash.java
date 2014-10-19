@@ -78,6 +78,7 @@ public class Splash extends ActionBarActivity {
             Intent intento = new Intent();
             intento.setClass(contexto, MainShop.class);
             startActivity(intento);
+            finish();
         }
 
         /* @Override

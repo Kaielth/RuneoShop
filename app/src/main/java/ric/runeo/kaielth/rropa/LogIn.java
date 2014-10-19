@@ -25,6 +25,7 @@ public class LogIn extends ActionBarActivity {
             public void onClick(View v) {
                 Intent i = new Intent(LogIn.this,Splash.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -33,6 +34,7 @@ public class LogIn extends ActionBarActivity {
             public void onClick(View v) {
                 Intent i = new Intent(LogIn.this,SignIn.class);
                 startActivity(i);
+                finish();
             }
         });
     }
