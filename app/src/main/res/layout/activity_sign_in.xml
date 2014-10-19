@@ -15,7 +15,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Name"
+            android:text="Nombre"
             android:id="@+id/textView" />
 
         <EditText
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:text=""
-            android:hint="Name"
+            android:hint="Nombre"
             android:ems="10"
             android:id="@+id/txtName" />
 
@@ -31,7 +31,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Address"
+            android:text="Direccion"
             android:id="@+id/textView2" />
 
         <EditText
@@ -39,14 +39,14 @@
             android:layout_height="wrap_content"
             android:inputType="textPostalAddress"
             android:ems="10"
-            android:hint="Address"
+            android:hint="Direccion"
             android:id="@+id/txtAddress" />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Birthday"
+            android:text="Fecha de nacimiento"
             android:id="@+id/textView3" />
 
         <DatePicker
