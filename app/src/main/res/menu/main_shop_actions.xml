@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- Search, should appear as action button -->
+    <item android:id="@+id/action_search"
+        android:icon="@drawable/category"
+        android:title="@string/action_category"
+        android:showAsAction="ifRoom" />
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_category_tshirt"
+        android:title="@string/action_category_tshirt"
+        android:showAsAction="never" />
+    <item android:id="@+id/action_category_pants"
+        android:title="@string/action_category_pants"
+        android:showAsAction="never" />
+</menu>

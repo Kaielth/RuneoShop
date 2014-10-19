@@ -7,15 +7,22 @@
 
     <!-- Productos -->
     <!-- Camisas -->
-    <string name="tshirt_a_name">Easy Rib T-Shirt</string>
+    <string name="tshirt_a_name">Easy Rib</string>
     <string name="tshirt_a_price">£8.00</string>
     <string name="tshirt_a_description">Comfortable ribbed t-shirt in black featuring stitch detailing and pocket detailing.</string>
-    <string name="tshirt_b_name">LONG SLEEVE CREW NECK</string>
+
+    <string name="tshirt_b_name">Long Sleeve</string>
     <string name="tshirt_b_price">£12.00</string>
-    <string name="tshirt_b_description">100% Cotton. Centre Back to Hem: 69cm/27.25", Chest: 49cm/19.25", Sleeve Length: 68cm/26.75", Bicep: 18cm/7". (Measured from UK Size M).</string>
-    <string name="tshirt_c_name">CREW NECK T SHIRT</string>
+    <string name="tshirt_b_description">Centre Back to Hem: 69cm/27.25", Chest: 49cm/19.25", Sleeve Length: 68cm/26.75"".</string>
+
+    <string name="tshirt_c_name">Crew Neck</string>
     <string name="tshirt_c_price">£6.00</string>
-    <string name="tshirt_c_description">100% Cotton. Centre Back to Hem 71cm/28", Chest 51cm/20", Bicep 16cm/6.25", Sleeve Length 19.5cm/7.5". (Measured from UK Size M).</string>
+    <string name="tshirt_c_description">Centre Back to Hem 71cm/28", Chest 51cm/20", Bicep 16cm/6.25", Sleeve Length 19.5cm/7.5".</string>
+
+    <!-- Pantalones -->
+    <string name="pant_a_name">Slim Jeans</string>
+    <string name="pant_a_price">£16.00</string>
+    <string name="pant_a_description">Buttoned top and concealed fly fastening, five pocket styling.</string>
 
     <!-- Menu -->
     <!-- Titulos -->
@@ -27,5 +34,12 @@
     <string name="title_activity_splash">Splash</string>
     <string name="title_activity_log_in">LogIn</string>
     <string name="title_activity_sing_in">SingIn</string>
+
+    <!-- Actions -->
+    <string name="action_shop">Tienda</string>
+
+    <string name="action_category">Categoría</string>
+    <string name="action_category_tshirt">Camisas</string>
+    <string name="action_category_pants">Pantalones</string>
 
 </resources>
