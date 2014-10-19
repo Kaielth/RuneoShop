@@ -31,7 +31,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Direccion"
+            android:text="Dirección"
             android:id="@+id/textView2" />
 
         <EditText
