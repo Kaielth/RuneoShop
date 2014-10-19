@@ -40,7 +40,7 @@ public class Splash extends ActionBarActivity {
             int imagen = 0;
             boolean cambio = false;
             try{
-                while(false && trans >= 0 && imagen < 4){
+                while(trans >= 0 && imagen < 4){
                     if(cambio){
                         trans = trans + 12;
                         if(trans > 255){
