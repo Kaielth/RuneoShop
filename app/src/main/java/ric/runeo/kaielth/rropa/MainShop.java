@@ -169,10 +169,10 @@ public class MainShop extends ActionBarActivity {
             int id = R.layout.elementos;
             TableRow product = (TableRow) inflater.inflate(id, null, false);
 
-            //int imagenID = context.getResources().getIdentifier(x.get(y).getImagen(), "drawable-xxhdpi", context.getPackageName());
+            int imagenID = context.getResources().getIdentifier(x.get(y).getImagen(), "drawable-xxhdpi", context.getPackageName());
 
             ImageView imagen = (ImageView) product.findViewById(R.id.imagenProducto);
-            imagen.setImageResource(R.drawable.tshirt);
+            imagen.setImageResource(imagenID);
             /*LinearLayout.LayoutParams parametros = new LinearLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
             parametros.leftMargin = 10;
             parametros.
