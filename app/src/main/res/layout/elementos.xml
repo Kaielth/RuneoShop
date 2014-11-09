@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableRow
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/product01"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout" >
+
+            <ImageView
+                android:id="@+id/imagenProducto"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/tshirt"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/addShopping01"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/shopping_cart"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/nombreProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:text="@string/tshirt_a_name"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/imagenProducto"
+                android:layout_toEndOf="@+id/imagenProducto" />
+
+            <TextView
+                android:id="@+id/precio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tshirt_a_price"
+                android:textSize="12dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/textView"
+                android:layout_above="@+id/descripcion"
+                android:layout_alignLeft="@+id/addShopping01"
+                android:layout_alignStart="@+id/addShopping01" />
+
+            <TextView
+                android:id="@+id/descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:textSize="9dp"
+                android:text="@string/tshirt_a_description"
+                android:layout_below="@+id/nombreProducto"
+                android:layout_toRightOf="@+id/imagenProducto"
+                android:layout_toEndOf="@+id/imagenProducto" />
+        </RelativeLayout>
+    </TableRow>
