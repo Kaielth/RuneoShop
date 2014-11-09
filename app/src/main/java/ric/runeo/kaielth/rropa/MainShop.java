@@ -10,12 +10,17 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -27,14 +32,41 @@ public class MainShop extends ActionBarActivity {
     TextView shopCounter;
     ArrayList<String> products;
     Context context = this;
-
+    private ViewGroup tabla;
+    ArrayList<Producto> productos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_shop);
+        tabla = (ViewGroup) findViewById(R.id.contenedor);
+
+        shop = (ImageView) findViewById(R.id.shop);
+        category = (ImageView) findViewById(R.id.category);
 
         products = new ArrayList<String>();
+        productos = new ArrayList<Producto>();
 
+        Producto prueba1 = new Producto();
+        prueba1.setNombre("camisa");
+        prueba1.setDescripcion("esto es una camisa");
+        prueba1.setPrecio(12.0);
+        prueba1.setImagen("tshirt.jpg");
+
+        productos.add(prueba1);
+
+        Producto prueba2 = new Producto();
+        prueba2.setNombre("camisa 2");
+        prueba2.setDescripcion("esto es otra camisa");
+        prueba2.setPrecio(15.0);
+        prueba2.setImagen("tshirt.jpg");
+
+        productos.add(prueba2);
+
+        System.out.println("antes de entrar esta bien");
+        System.out.println("el producto 0 es " + productos.get(0).getNombre());
+        agregarElemento(productos);
+
+        /*
         product01 = (TableRow) findViewById(R.id.product01);
         product02 = (TableRow) findViewById(R.id.product02);
         product03 = (TableRow) findViewById(R.id.product03);
@@ -81,7 +113,7 @@ public class MainShop extends ActionBarActivity {
                 products.add("Jeans");
             }
         });
-
+        */
         shop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -127,7 +159,42 @@ public class MainShop extends ActionBarActivity {
         });
     }
 
+    public void agregarElemento(ArrayList<Producto> x){
+        for(int y = 0; y < x.size(); y++) {
+            System.out.println("los productos a agregar son " + x.size());
 
+            System.out.println("este es el producto " + y + " y su nombre es " + x.get(y).getNombre());
+
+            LayoutInflater inflater = LayoutInflater.from(this);
+            int id = R.layout.elementos;
+            TableRow product = (TableRow) inflater.inflate(id, null, false);
+
+            //int imagenID = context.getResources().getIdentifier(x.get(y).getImagen(), "drawable-xxhdpi", context.getPackageName());
+
+            ImageView imagen = (ImageView) product.findViewById(R.id.imagenProducto);
+            imagen.setImageResource(R.drawable.tshirt);
+            /*LinearLayout.LayoutParams parametros = new LinearLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+            parametros.leftMargin = 10;
+            parametros.
+            imagen.setLayoutParams();*/
+
+            TextView nombre = (TextView) product.findViewById(R.id.nombreProducto);
+            nombre.setText(x.get(y).getNombre());
+
+            TextView descripcion = (TextView) product.findViewById(R.id.descripcion);
+            descripcion.setText(x.get(y).getDescripcion());
+
+            TextView precio = (TextView) product.findViewById(R.id.precio);
+            precio.setText(Double.valueOf(x.get(y).getPrecio()).toString());
+
+            ImageView addShop01 = (ImageView) product.findViewById(R.id.addShopping01);
+
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+            params.bottomMargin = 20;
+            product.setLayoutParams(params);
+            tabla.addView(product);
+        }
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
