@@ -1,67 +1,105 @@
-<ScrollView
+<LinearLayout
+    android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scrollView">
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:id="@+id/linearLayout">
+        android:id="@+id/scrollView" >
 
-        <TextView
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Nombre"
-            android:id="@+id/textView" />
+            android:padding="20dp"
+            android:id="@+id/linearLayout" >
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text=""
-            android:hint="Nombre"
-            android:ems="10"
-            android:id="@+id/txtName" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Nombre"
+                android:id="@+id/textView" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Dirección"
-            android:id="@+id/textView2" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text=""
+                android:hint="Nombre"
+                android:ems="10"
+                android:id="@+id/txtName" />
 
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPostalAddress"
-            android:ems="10"
-            android:hint="Direccion"
-            android:id="@+id/txtAddress" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Dirección"
+                android:id="@+id/textView2" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Fecha de nacimiento"
-            android:id="@+id/textView3" />
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:ems="10"
+                android:hint="Direccion"
+                android:id="@+id/txtAddress" />
 
-        <DatePicker
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/dpiBirthday"
-            android:calendarViewShown="false">
-        </DatePicker>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Fecha de nacimiento"
+                android:id="@+id/textView3" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sign up"
-            android:id="@+id/btnSignUp"
-            android:onClick="singUp"
-            android:layout_gravity="right|bottom" />
-    </LinearLayout>
-</ScrollView>
+            <DatePicker
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dpiCumple"
+                android:calendarViewShown="false" >
+
+            </DatePicker>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Contraseña"
+                android:id="@+id/txvPass" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:hint="Contraseña"
+                android:id="@+id/txtPassword" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Confirmar contraseña"
+                android:id="@+id/txvPass2" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Contraseña"
+                android:ems="10"
+                android:id="@+id/txtPassword2" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign up"
+                android:id="@+id/btnSignUp"
+                android:onClick="singUp"
+                android:layout_gravity="right|bottom" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

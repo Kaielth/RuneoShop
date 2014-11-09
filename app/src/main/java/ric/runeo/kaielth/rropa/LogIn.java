@@ -7,11 +7,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 
 
 public class LogIn extends ActionBarActivity {
 
     Button btnLogIn, btnRegister;
+    EditText txtNombre,txtPassword;
+    File prof;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,13 +28,22 @@ public class LogIn extends ActionBarActivity {
         setContentView(R.layout.activity_log_in);
         btnLogIn = (Button)findViewById(R.id.btnLogIn);
         btnRegister = (Button)findViewById(R.id.btnRegister);
+        txtNombre = (EditText)findViewById(R.id.txtNombre);
+        txtPassword = (EditText)findViewById(R.id.txtPassword);
+
+        prof = new File(this.getFilesDir(), "profile.txt");
 
         btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(LogIn.this,Splash.class);
-                startActivity(i);
-                finish();
+                if (comprueba()){
+                    Intent i = new Intent(LogIn.this,Splash.class);
+                    startActivity(i);
+                    finish();
+                }else{
+                    Toast.makeText(LogIn.this,"Datos erroneos",Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
@@ -58,4 +76,27 @@ public class LogIn extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    public boolean comprueba() {
+        boolean tu = false;
+        try {
+            BufferedReader leer = new BufferedReader(new FileReader(prof));
+            String nombre = leer.readLine();
+            leer.readLine();
+            leer.readLine();
+            leer.readLine();
+            leer.readLine();
+            String cont = leer.readLine();
+
+            if (nombre.equals(txtNombre.getText().toString()) && cont.equals(txtPassword.getText().toString())) {
+                tu = true;
+            } else {
+                tu = false;
+            }
+        } catch (IOException e) {
+            Toast.makeText(LogIn.this, "Error", Toast.LENGTH_SHORT).show();
+        }
+        return tu;
+    }
+
 }
