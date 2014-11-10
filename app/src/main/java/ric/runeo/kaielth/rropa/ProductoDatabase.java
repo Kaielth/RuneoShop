@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class ProductoDatabase extends SQLiteOpenHelper{
     //Versión de la Base de datos
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     //Nombre de la base de datos
     private static final String DATABASE_NAME = "rropa";
     // Tablas
@@ -49,9 +49,9 @@ public class ProductoDatabase extends SQLiteOpenHelper{
         //Creamos la tabla PRODUCTO
         sqLiteDatabase.execSQL(CREATE_PRODUCTO_TABLE);
         //Agregamos algunos productos base
-        sqLiteDatabase.execSQL("INSERT INTO producto(nombre, precio, imagen, descripcion, categoria) VALUES('Easy Rib', 175.0, 'tshirt.jpg', 'Cómoda camisa en negro con estampado de detalle y bolsillos..', 'Camisa')");
-        sqLiteDatabase.execSQL("INSERT INTO producto(nombre, precio, imagen, descripcion, categoria) VALUES('Long Sleeve', 260.0, 'tshirt2.jpg', 'Dobladillo 69cm/27.25, Pecho 49cm/19.25, Manga 68cm/26.75','Camisa')");
-        sqLiteDatabase.execSQL("INSERT INTO producto(nombre, precio, imagen, descripcion, categoria) VALUES('Crew Neck', 130.0, 'tshirt3.jpg', 'Dobladillo 71cm/28, Pecho 51cm/20, Manga 19.5cm/7.5.','Camisa')");
+        sqLiteDatabase.execSQL("INSERT INTO producto(nombre, precio, imagen, descripcion, categoria) VALUES('Easy Rib', 175.0, 'tshirt.jpg', 'Cómoda camisa en negro con estampado de detalle y bolsillos..', 'Camiseta')");
+        sqLiteDatabase.execSQL("INSERT INTO producto(nombre, precio, imagen, descripcion, categoria) VALUES('Long Sleeve', 260.0, 'tshirt2.jpg', 'Dobladillo 69cm/27.25, Pecho 49cm/19.25, Manga 68cm/26.75','Camiseta')");
+        sqLiteDatabase.execSQL("INSERT INTO producto(nombre, precio, imagen, descripcion, categoria) VALUES('Crew Neck', 130.0, 'tshirt3.jpg', 'Dobladillo 71cm/28, Pecho 51cm/20, Manga 19.5cm/7.5.','Camiseta')");
         sqLiteDatabase.execSQL("INSERT INTO producto(nombre, precio, imagen, descripcion, categoria) VALUES('Slim Jeans', 350.0, 'pants.jpg', 'Abotonado y cremallera oculta, cinco bolsillos.','Pantalon')");
     }
 

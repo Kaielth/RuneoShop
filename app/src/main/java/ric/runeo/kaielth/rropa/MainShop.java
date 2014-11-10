@@ -28,94 +28,34 @@ import java.util.ArrayList;
 public class MainShop extends ActionBarActivity {
 
     ImageView addShop01, addShop02, addShop03, addShop04, shop, category;
-    TableRow product01, product02, product03, product04;
+    ArrayList<TableRow> product00;
     TextView shopCounter;
     ArrayList<String> products;
+    ArrayList<Producto> productos;
     Context context = this;
     private ViewGroup tabla;
-    ArrayList<Producto> productos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_shop);
         tabla = (ViewGroup) findViewById(R.id.contenedor);
 
+        products = new ArrayList<String>();
+        product00 = new ArrayList<TableRow>();
+
         shop = (ImageView) findViewById(R.id.shop);
         category = (ImageView) findViewById(R.id.category);
 
-        products = new ArrayList<String>();
-        productos = new ArrayList<Producto>();
-
-        Producto prueba1 = new Producto();
-        prueba1.setNombre("camisa");
-        prueba1.setDescripcion("esto es una camisa");
-        prueba1.setPrecio(12.0);
-        prueba1.setImagen("tshirt.jpg");
-
-        productos.add(prueba1);
-
-        Producto prueba2 = new Producto();
-        prueba2.setNombre("camisa 2");
-        prueba2.setDescripcion("esto es otra camisa");
-        prueba2.setPrecio(15.0);
-        prueba2.setImagen("tshirt.jpg");
-
-        productos.add(prueba2);
-
-        System.out.println("antes de entrar esta bien");
-        System.out.println("el producto 0 es " + productos.get(0).getNombre());
-        //agregarElemento(productos);
         ProductoDatabase pd = new ProductoDatabase(context);
-        agregarElemento(pd.getProductos());
+        productos = pd.getProductos();
+        agregarElemento(productos);
 
-        /*
-        product01 = (TableRow) findViewById(R.id.product01);
-        product02 = (TableRow) findViewById(R.id.product02);
-        product03 = (TableRow) findViewById(R.id.product03);
-        product04 = (TableRow) findViewById(R.id.product04);
-
-        addShop01 = (ImageView)findViewById(R.id.addShopping01);
-        addShop02 = (ImageView)findViewById(R.id.addShopping02);
-        addShop03 = (ImageView)findViewById(R.id.addShopping03);
-        addShop04 = (ImageView)findViewById(R.id.addShopping04);
         shop = (ImageView) findViewById(R.id.shop);
         category = (ImageView) findViewById(R.id.category);
 
         shopCounter = (TextView) findViewById(R.id.shop_counter);
         shopCounter.setText("0");
 
-        addShop01.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                shopCounter.setText(String.valueOf(Integer.parseInt(shopCounter.getText().toString())+1));
-                products.add("Easy Rib");
-            }
-        });
-
-        addShop02.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                shopCounter.setText(String.valueOf(Integer.parseInt(shopCounter.getText().toString())+1));
-                products.add("Long Sleeve");
-            }
-        });
-
-        addShop03.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                shopCounter.setText(String.valueOf(Integer.parseInt(shopCounter.getText().toString())+1));
-                products.add("Crew Neck");
-            }
-        });
-
-        addShop04.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                shopCounter.setText(String.valueOf(Integer.parseInt(shopCounter.getText().toString())+1));
-                products.add("Jeans");
-            }
-        });
-        */
         shop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -137,20 +77,25 @@ public class MainShop extends ActionBarActivity {
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
                         if(item == 0){
-                            product01.setVisibility(View.VISIBLE);
-                            product02.setVisibility(View.VISIBLE);
-                            product03.setVisibility(View.VISIBLE);
-                            product04.setVisibility(View.VISIBLE);
+                            for (int i = 0; i < product00.size(); i++){
+                                product00.get(i).setVisibility(View.VISIBLE);
+                            }
                         }else if(item == 1){
-                            product01.setVisibility(View.VISIBLE);
-                            product02.setVisibility(View.VISIBLE);
-                            product03.setVisibility(View.VISIBLE);
-                            product04.setVisibility(View.GONE);
+                            for (int i = 0; i < product00.size(); i++){
+                                if(!productos.get(i).getCategoria().equals("Camiseta")){
+                                    product00.get(i).setVisibility(View.GONE);
+                                }else{
+                                    product00.get(i).setVisibility(View.VISIBLE);
+                                }
+                            }
                         }else if(item == 2){
-                            product01.setVisibility(View.GONE);
-                            product02.setVisibility(View.GONE);
-                            product03.setVisibility(View.GONE);
-                            product04.setVisibility(View.VISIBLE);
+                            for (int i = 0; i < product00.size(); i++){
+                                if(!productos.get(i).getCategoria().equals("Pantalon")){
+                                    product00.get(i).setVisibility(View.GONE);
+                                }else{
+                                    product00.get(i).setVisibility(View.VISIBLE);
+                                }
+                            }
                         }
                         dialog.dismiss();
                     }
@@ -161,8 +106,10 @@ public class MainShop extends ActionBarActivity {
         });
     }
 
+    public static String nombreProducto;
     public void agregarElemento(ArrayList<Producto> x){
         for(int y = 0; y < x.size(); y++) {
+            nombreProducto = x.get(y).getNombre();
             System.out.println("los productos a agregar son " + x.size());
 
             System.out.println("este es el producto " + y + " y su nombre es " + x.get(y).getNombre());
@@ -175,10 +122,6 @@ public class MainShop extends ActionBarActivity {
 
             ImageView imagen = (ImageView) product.findViewById(R.id.imagenProducto);
             imagen.setImageResource(imagenID);
-            /*LinearLayout.LayoutParams parametros = new LinearLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-            parametros.leftMargin = 10;
-            parametros.
-            imagen.setLayoutParams();*/
 
             TextView nombre = (TextView) product.findViewById(R.id.nombreProducto);
             nombre.setText(x.get(y).getNombre());
@@ -190,10 +133,20 @@ public class MainShop extends ActionBarActivity {
             precio.setText(Double.valueOf(x.get(y).getPrecio()).toString());
 
             ImageView addShop01 = (ImageView) product.findViewById(R.id.addShopping01);
+            addShop01.setOnClickListener(new View.OnClickListener() {
+                String nombreProducto = MainShop.nombreProducto;
+
+                @Override
+                public void onClick(View view) {
+                    shopCounter.setText(String.valueOf(Integer.parseInt(shopCounter.getText().toString())+1));
+                    products.add(this.nombreProducto);
+                }
+            });
 
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
             params.bottomMargin = 20;
             product.setLayoutParams(params);
+            product00.add(product);
             tabla.addView(product);
         }
     }
