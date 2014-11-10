@@ -118,7 +118,7 @@ public class MainShop extends ActionBarActivity {
             int id = R.layout.elementos;
             TableRow product = (TableRow) inflater.inflate(id, null, false);
 
-            int imagenID = context.getResources().getIdentifier(x.get(y).getImagen(), "drawable-xxhdpi", context.getPackageName());
+            int imagenID = context.getResources().getIdentifier("drawable/" + x.get(y).getImagen(), null, context.getPackageName());
 
             ImageView imagen = (ImageView) product.findViewById(R.id.imagenProducto);
             imagen.setImageResource(imagenID);
