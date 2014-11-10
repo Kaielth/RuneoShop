@@ -64,7 +64,9 @@ public class MainShop extends ActionBarActivity {
 
         System.out.println("antes de entrar esta bien");
         System.out.println("el producto 0 es " + productos.get(0).getNombre());
-        agregarElemento(productos);
+        //agregarElemento(productos);
+        ProductoDatabase pd = new ProductoDatabase(context);
+        agregarElemento(pd.getProductos());
 
         /*
         product01 = (TableRow) findViewById(R.id.product01);

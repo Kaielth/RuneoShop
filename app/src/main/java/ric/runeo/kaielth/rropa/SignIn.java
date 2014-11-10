@@ -51,7 +51,6 @@ public class SignIn extends ActionBarActivity {
             Toast.makeText(this,"Completa los campos correctamente",Toast.LENGTH_SHORT).show();
         }else{
             savePrf();
-
         }
     }
 
