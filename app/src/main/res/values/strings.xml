@@ -10,11 +10,9 @@
     <string name="tshirt_a_name">Easy Rib</string>
     <string name="tshirt_a_price">$175.00</string>
     <string name="tshirt_a_description">Cómoda camisa en negro con estampado de detalle y bolsillos..</string>
-
     <string name="tshirt_b_name">Long Sleeve</string>
     <string name="tshirt_b_price">$260.00</string>
     <string name="tshirt_b_description">Dobladillo: 69cm/27.25", Pecho: 49cm/19.25", Manga: 68cm/26.75"</string>
-
     <string name="tshirt_c_name">Crew Neck</string>
     <string name="tshirt_c_price">$130.00</string>
     <string name="tshirt_c_description">Dobladillo: 71cm/28", Pecho: 51cm/20", Manga: 19.5cm/7.5".</string>
@@ -37,9 +35,9 @@
 
     <!-- Actions -->
     <string name="action_shop">Tienda</string>
-
     <string name="action_category">Categoría</string>
     <string name="action_category_tshirt">Camisas</string>
     <string name="action_category_pants">Pantalones</string>
+    <string name="title_activity_ubicacion">Map</string>
 
 </resources>

@@ -27,7 +27,7 @@ public class Splash extends ActionBarActivity {
         anima.execute();
 
     }
-
+                                            //parametros, progreso, resultado
     public class Actualiza extends AsyncTask<Void, Integer, Void> {
         Context contexto;
         public Actualiza(Context c){

@@ -134,7 +134,7 @@ public class MainShop extends ActionBarActivity {
 
             ImageView addShop01 = (ImageView) product.findViewById(R.id.addShopping01);
             addShop01.setOnClickListener(new View.OnClickListener() {
-                String nombreProducto = MainShop.nombreProducto;
+            String nombreProducto = MainShop.nombreProducto;
 
                 @Override
                 public void onClick(View view) {
