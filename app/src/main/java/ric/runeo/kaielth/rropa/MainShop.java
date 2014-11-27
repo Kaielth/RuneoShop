@@ -3,6 +3,7 @@ package ric.runeo.kaielth.rropa;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -172,6 +173,10 @@ public class MainShop extends ActionBarActivity {
                 break;
             case R.id.menu_vision:
                 showAlertDialog("Visión", getString(R.string.menu_vision_description));
+                break;
+            case R.id.menu_mapa:
+                Intent intent = new Intent(this, Ubicacion.class);
+                startActivity(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);

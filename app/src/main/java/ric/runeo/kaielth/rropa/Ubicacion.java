@@ -14,6 +14,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.ArrayList;
+
 public class Ubicacion extends FragmentActivity implements LocationListener{
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
@@ -69,10 +71,13 @@ public class Ubicacion extends FragmentActivity implements LocationListener{
      * <p>
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
-    Marker tienda1, tu;
+    Marker tu;
+    ArrayList<Marker> tiendas;
     private void setUpMap() {
-
-        tienda1 = mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Rropa sucursal"));
+        tiendas = new ArrayList<Marker>();
+        tiendas.add(mMap.addMarker(new MarkerOptions().position(new LatLng(28.726926, -106.118669)).title("Rropa sucursal")));
+        tiendas.add(mMap.addMarker(new MarkerOptions().position(new LatLng(28.712333, -106.105376)).title("Rropa sucursal")));
+        tiendas.add(mMap.addMarker(new MarkerOptions().position(new LatLng(28.672734, -106.078515)).title("Rropa sucursal")));
     }
 
     @Override

@@ -26,6 +26,7 @@
     <!-- Titulos -->
     <string name="menu_vision_title">Visión</string>
     <string name="menu_mision_title">Misión</string>
+    <string name="menu_mapa_title">Mapa</string>
     <!-- Descripciones -->
     <string name="menu_vision_description">Ofrecer al mundo una cartera de marcas de ropa que se anticipan y satisfacen los deseos y las necesidades de las personas.</string>
     <string name="menu_mision_description">Refrescar al mundo en cuerpo, mente y alma. Inspirar momentos de optimismo a través de nuestras marcas y acciones, para crear valor y dejar nuestra huella en cada uno de los lugares en los que operamos.</string>

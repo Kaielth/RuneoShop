@@ -14,4 +14,8 @@
         android:title="@string/menu_vision_title"
         android:orderInCategory="102"
         app:showAsAction="never" />
+    <item android:id="@+id/menu_mapa"
+        android:title="@string/menu_mapa_title"
+        android:orderInCategory="103"
+        app:showAsAction="never" />
 </menu>
